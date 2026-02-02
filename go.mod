@@ -4,7 +4,7 @@ go 1.25.1
 
 require (
 	github.com/agentio/slink v0.0.0-20260130172437-478f51016da1
-	github.com/agentio/sting v0.0.0-20260202041123-367fbd1e1013
+	github.com/agentio/sting v0.0.0-20260202172102-1c7495d2139c
 	github.com/charmbracelet/log v0.4.2
 	github.com/spf13/cobra v1.10.2
 )

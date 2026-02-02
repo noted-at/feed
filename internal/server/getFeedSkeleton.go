@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/agentio/sting/pkg/auth"
 	"github.com/agentio/sting/pkg/sting"
 	"github.com/charmbracelet/log"
 	"github.com/noted-at/feed/gen/xrpc"
@@ -14,7 +13,7 @@ func getFeedSkeletonHandler(w http.ResponseWriter, r *http.Request) {
 	p := r.URL.Query()
 	log.Infof("feed: %s", p["feed"])
 	log.Infof("limit: %s", p["limit"])
-	claims, err := auth.Authenticate(r.Header.Get("authorization"))
+	claims, err := sting.Authenticate(r.Header.Get("authorization"))
 	if err == nil {
 		b, _ := json.MarshalIndent(claims, "", "  ")
 		log.Infof("claims: %s", b)
