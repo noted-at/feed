@@ -1,9 +1,9 @@
 package server
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
+
+	"github.com/agentio/sting/pkg/sting"
 )
 
 func getDidJSONHandler(w http.ResponseWriter, r *http.Request) {
@@ -18,13 +18,7 @@ func getDidJSONHandler(w http.ResponseWriter, r *http.Request) {
 			},
 		},
 	}
-	b, err := json.Marshal(doc)
-	if err != nil {
-		http.Error(w, "oops", http.StatusInternalServerError)
-		return
-	}
-	w.Header().Set("content-type", "application/json")
-	fmt.Fprintf(w, "%s\n", string(b))
+	sting.RespondWithJSON(w, doc)
 }
 
 type DidDocument struct {

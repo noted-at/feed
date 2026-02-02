@@ -2,6 +2,8 @@ github.com/agentio/slink v0.0.0-20260130172437-478f51016da1 h1:Qvz7/H8ZXYV/kP+Qv
 github.com/agentio/slink v0.0.0-20260130172437-478f51016da1/go.mod h1:MWZ0sfjQ04m70uOw68f30wBg0ZsP7bbBZg4NRAYWxPg=
 github.com/agentio/sting v0.0.0-20260202035406-4e75f7d325ef h1:6N25WBsGvBm71G9/PcnxcNt6cxPBarHMqFM3f9dUIiE=
 github.com/agentio/sting v0.0.0-20260202035406-4e75f7d325ef/go.mod h1:YE0yW0Z94/KpDK8X9BWj+q17zIWmtmtNhKP19LOdgjU=
+github.com/agentio/sting v0.0.0-20260202041123-367fbd1e1013 h1:OmdIVv6pw1H6Ne7vZ2vPQGoxgU8yctIWdHJATdlxBW8=
+github.com/agentio/sting v0.0.0-20260202041123-367fbd1e1013/go.mod h1:YE0yW0Z94/KpDK8X9BWj+q17zIWmtmtNhKP19LOdgjU=
 github.com/aymanbagabas/go-osc52/v2 v2.0.1 h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k=
 github.com/aymanbagabas/go-osc52/v2 v2.0.1/go.mod h1:uYgXzlJ7ZpABp8OJ+exZzJJhRNQ2ASbcXHWsFqH8hp8=
 github.com/charmbracelet/colorprofile v0.2.3-0.20250311203215-f60798e515dc h1:4pZI35227imm7yK2bGPcfpFEmuY1gc2YSTShr4iJBfs=

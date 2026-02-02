@@ -1,10 +1,11 @@
 package server
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/agentio/sting/pkg/auth"
-	common "github.com/agentio/sting/pkg/sting"
+	"github.com/agentio/sting/pkg/sting"
 	"github.com/charmbracelet/log"
 	"github.com/noted-at/feed/gen/xrpc"
 )
@@ -13,7 +14,11 @@ func getFeedSkeletonHandler(w http.ResponseWriter, r *http.Request) {
 	p := r.URL.Query()
 	log.Infof("feed: %s", p["feed"])
 	log.Infof("limit: %s", p["limit"])
-	auth.Authenticate(r.Header.Get("authorization"))
+	claims, err := auth.Authenticate(r.Header.Get("authorization"))
+	if err == nil {
+		b, _ := json.MarshalIndent(claims, "", "  ")
+		log.Infof("claims: %s", b)
+	}
 	response := &xrpc.AppBskyFeedGetFeedSkeleton_Output{
 		Feed: []*xrpc.AppBskyFeedDefs_SkeletonFeedPost{
 			{
@@ -27,5 +32,5 @@ func getFeedSkeletonHandler(w http.ResponseWriter, r *http.Request) {
 			},
 		},
 	}
-	common.RespondWithJSON(w, response)
+	sting.RespondWithJSON(w, response)
 }
