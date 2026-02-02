@@ -3,6 +3,8 @@ package server
 import (
 	"net"
 	"net/http"
+
+	"github.com/charmbracelet/log"
 )
 
 func Run() error {
@@ -18,6 +20,7 @@ func Run() error {
 	if err != nil {
 		return err
 	}
+	log.Infof("starting feed server")
 	return server.Serve(listener)
 }
 

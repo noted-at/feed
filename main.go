@@ -26,6 +26,6 @@ func cmd() *cobra.Command {
 			return server.Run()
 		},
 	}
-	cmd.Flags().StringVarP(&loglevel, "log-level", "l", "warn", "log level (debug, info, warn, error, fatal)")
+	cmd.Flags().StringVarP(&loglevel, "log-level", "l", "info", "log level (debug, info, warn, error, fatal)")
 	return cmd
 }

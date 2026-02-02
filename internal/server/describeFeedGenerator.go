@@ -3,8 +3,8 @@ package server
 import (
 	"net/http"
 
+	common "github.com/agentio/sting/pkg/sting"
 	"github.com/noted-at/feed/gen/xrpc"
-	"github.com/noted-at/feed/internal/common"
 )
 
 func describeFeedGeneratorHandler(w http.ResponseWriter, r *http.Request) {

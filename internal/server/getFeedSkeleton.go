@@ -3,15 +3,17 @@ package server
 import (
 	"net/http"
 
+	"github.com/agentio/sting/pkg/auth"
+	common "github.com/agentio/sting/pkg/sting"
 	"github.com/charmbracelet/log"
 	"github.com/noted-at/feed/gen/xrpc"
-	"github.com/noted-at/feed/internal/common"
 )
 
 func getFeedSkeletonHandler(w http.ResponseWriter, r *http.Request) {
 	p := r.URL.Query()
 	log.Infof("feed: %s", p["feed"])
 	log.Infof("limit: %s", p["limit"])
+	auth.Authenticate(r.Header.Get("authorization"))
 	response := &xrpc.AppBskyFeedGetFeedSkeleton_Output{
 		Feed: []*xrpc.AppBskyFeedDefs_SkeletonFeedPost{
 			{
