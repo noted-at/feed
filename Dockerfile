@@ -3,7 +3,7 @@ WORKDIR /app
 COPY go.* ./
 RUN go mod download
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -v -o feed .
+RUN CGO_ENABLED=0 GOOS=linux go build -v -tags jwx_es256k -o feed .
 
 FROM alpine:latest
 RUN apk add --no-cache ca-certificates
