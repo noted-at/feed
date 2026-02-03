@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/agentio/sting/pkg/sting"
+	"github.com/agentio/slink/pkg/slink"
 	"github.com/noted-at/feed/gen/xrpc"
 )
 
@@ -16,5 +16,5 @@ func describeFeedGeneratorHandler(w http.ResponseWriter, r *http.Request) {
 			},
 		},
 	}
-	sting.RespondWithJSON(w, response)
+	slink.RespondWithJSON(w, response)
 }

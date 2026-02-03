@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/agentio/sting/pkg/sting"
+	"github.com/agentio/slink/pkg/slink"
 )
 
 func getDidJSONHandler(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +18,7 @@ func getDidJSONHandler(w http.ResponseWriter, r *http.Request) {
 			},
 		},
 	}
-	sting.RespondWithJSON(w, doc)
+	slink.RespondWithJSON(w, doc)
 }
 
 type DidDocument struct {

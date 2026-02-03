@@ -3,8 +3,7 @@ module github.com/noted-at/feed
 go 1.25.1
 
 require (
-	github.com/agentio/slink v0.0.0-20260130172437-478f51016da1
-	github.com/agentio/sting v0.0.0-20260203020327-d626bd16919c
+	github.com/agentio/slink v0.0.0-20260203040507-e6ba0f53e2f9
 	github.com/charmbracelet/log v0.4.2
 	github.com/spf13/cobra v1.10.2
 )
@@ -22,6 +21,7 @@ require (
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.4.0 // indirect
 	github.com/go-logfmt/logfmt v0.6.1 // indirect
 	github.com/goccy/go-json v0.10.5 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/lestrrat-go/blackmagic v1.0.4 // indirect
 	github.com/lestrrat-go/dsig v1.0.0 // indirect
