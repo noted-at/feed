@@ -1,4 +1,6 @@
-all:
+all:	xrpc feed
+
+feed:
 	go install -tags jwx_es256k ./...
 
 xrpc:
