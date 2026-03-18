@@ -5,3 +5,6 @@ feed:
 
 xrpc:
 	slink generate xrpc -m xrpc.json -l debug
+
+submodules:
+	git submodule update --init --recursive
